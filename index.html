@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mdl-grid portfolio-copy">
+            <div class="mdl-grid portfolio-max-width">
                 <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Transport Sanitarny</h3>
                 <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding">
                     <p>
@@ -102,17 +102,38 @@
                 <div class="mdl-cell mdl-cell--6-col">
                     <img class="article-image" src=" images/karetka2.png" border="0" alt="">
                 </div>
-                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Zamów transport</h3>
-                <div class="mdl-cell mdl-cell--12-col">
-                    <img class="article-image" src=" images/karetka2.png" border="0" alt="">
-                </div>
-                <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding" style="text-align: center">
-                    <p>
-                        Zamów transport już teraz!<br>
-                        Wyślij do nas zgłoszenie, opisz na czym ma polegać transport a my oddzwonimy do ciebie z potwierdzeniem dokonania przewozu.
-                        <div>mail@mail.pl</div>
-                        <div>Telefon: TELEFON1 lub TELEFON2</div>
-                    </p>
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Zamów transport już teraz!</h2>
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src=" images/karetka2.png" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            Wyślij do nas zgłoszenie, opisz na czym ma polegać transport a my oddzwonimy do ciebie z potwierdzeniem dokonania przewozu.<br>
+                            mail@mail.pl<br>Telefon: TELEFON1 lub TELEFON2</p>
+                        <form method="POST" action="https://formspree.io/bartlomiejlawniczak1995@gmail.com" class="">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
+                                <label class="mdl-textfield__label" for="Name">Imię i nazwisko...</label>
+                                <span class="mdl-textfield__error">Niedozwolony znak</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email" name="email">
+                                <label class="mdl-textfield__label" for="Email">Email...</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="text"></textarea>
+                                <label class="mdl-textfield__label" for="note">Wiadomość</label>
+                            </div>
+                            <p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                    Submit
+                                </button>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
             <footer class="mdl-mini-footer">
