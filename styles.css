@@ -1,9 +1,13 @@
-.portfolio-header {
+html {
+    text-align: justify;
+}
+
+.medical-transport-header {
     position: relative;
     background-image: url(images/header-bg.jpg);
 }
 
-.portfolio-header .mdl-layout__header-row {
+.medical-transport-header .mdl-layout__header-row {
     padding: 0;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -20,15 +24,15 @@
     display: none;
 }
 
-.portfolio-logo-row {
+.medical-transport-logo-row {
     min-height: 200px;
 }
 
-.is-compact .portfolio-logo-row {
+.is-compact .medical-transport-logo-row {
     min-height: auto;
 }
 
-.portfolio-logo {
+.medical-transport-logo {
     background: url(images/karetka.png) 50% no-repeat;
     background-size: contain;
     height: 150px;
@@ -36,73 +40,61 @@
     margin: auto auto 10px;
 }
 
-.is-compact .portfolio-logo {
+.is-compact .medical-transport-logo {
     height: 50px;
     width: 50px;
     margin-top: 7px;
 }
 
-.portfolio-navigation-row {
+.medical-transport-navigation-row {
     background-color: rgba(0, 0, 0, 0.08);
     text-transform: uppercase;
     height: 45px;
 }
 
-.portfolio-navigation-row  .mdl-navigation {
+.medical-transport-navigation-row  .mdl-navigation {
     text-align: center;
     max-width: 1000px;
     width: 100%;
 }
 
-.portfolio-navigation-row .mdl-navigation__link {
+.medical-transport-navigation-row .mdl-navigation__link {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
     line-height: 42px;
 }
 
-.portfolio-header .mdl-layout__drawer-button {
+.medical-transport-header .mdl-layout__drawer-button {
     background-color: rgba(197, 197, 197, 0.44);
 }
 
-.portfolio-navigation-row .is-active {
+.medical-transport-navigation-row .is-active {
     position: relative;
     font-weight: bold;
 }
 
-.portfolio-navigation-row .is-active:after {
+.medical-transport-navigation-row .is-active:after {
     content: "";
     width: 70%;
     height: 2px;
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
     background-color: rgb(255,64,129);
     left: 15%;
 }
 
-.portfolio-card .mdl-card__title {
-    padding-bottom: 0;
+.mdl-card__title {
+    justify-content: center;
 }
 
-.portfolio-blog-card-full-bg {
-    background: url(images/example-blog03.jpg) center / cover;
+.mdl-card__title-text {
+    font-size: 38px;
+    text-align: center;
 }
 
-.portfolio-blog-card-event-bg {
-    background: url(images/example-blog05.jpg) center / cover;
-}
-
-.portfolio-blog-card-strip-bg {
-    background: url(images/example-blog06.jpg) center / cover;
-}
-
-.portfolio-blog-card-compact .mdl-card__title {
-    padding-bottom: 0;
-}
-
-.portfolio-blog-card-bg > .mdl-card__actions {
+.medical-transport-blog-card-bg > .mdl-card__actions {
     height: 52px;
     padding: 16px;
     background: rgba(0, 0, 0, 0.2);
@@ -113,12 +105,12 @@ img.article-image {
     height: auto;
 }
 
-.portfolio-max-width {
+.medical-transport-max-width {
     max-width: 900px;
     margin: auto;
 }
 
-.portfolio-copy {
+.medical-transport-copy {
     max-width: 700px;
 }
 
@@ -138,7 +130,7 @@ img.article-image {
     padding: 10px 0 0;
 }
 
-.portfolio-share-btn {
+.medical-transport-share-btn {
     position: relative;
     float: right;
     top: -4px;
@@ -154,16 +146,55 @@ img.article-image {
     display: flex;
 }
 
-.portfolio-contact .mdl-textfield {
+.medical-transport-contact .mdl-textfield {
     width: 100%;
 }
 
-.portfolio-contact form {
+.section-label {
+    margin-top: 30px;
+}
+
+.sections {
+    justify-content: center;
+}
+
+.contact-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-field {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.contact-form {
     max-width: 550px;
-    margin: auto;
+    text-align: center;
+    margin: 30px auto auto;
+}
+
+.footer-image {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-label {
+    margin-left: 10px;
 }
 
 footer {
-    background-image: url(images/footer-background.png);
     background-size: cover;
+}
+
+@media (max-width: 839px) {
+    .section-label {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .tablet-and-desktop {
+        display: none;
+    }
 }
