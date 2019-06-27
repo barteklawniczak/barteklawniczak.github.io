@@ -27,6 +27,23 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-deep_purple.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#content').scroll(function(){
+                $('.animated').each(function() {
+                    var top_of_element = $(this).offset().top;
+                    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+                    var top_of_screen = $(window).scrollTop();
+
+                    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+                        $(this).addClass('animation-fade-in')
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -41,15 +58,16 @@
             <div class="mdl-layout__header-row medical-transport-navigation-row mdl-layout tablet-and-desktop">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <!-- <a class="mdl-navigation__link" href="index.html">Home</a> -->
-                    <a class="mdl-navigation__link" href="#transport">Transport Sanitarny</a>
-                    <a class="mdl-navigation__link" href="#zabezpieczenia">Zabezpieczenia Medyczne</a>
-                    <a class="mdl-navigation__link" href="#pokazy">Pokazy Pierwszej Pomocy</a>
+                    <a class="mdl-navigation__link" href="#zakres_dzialania">Zakres działania</a>
+                    <!-- <a class="mdl-navigation__link" href="#zabezpieczenia">Zabezpieczenia Medyczne</a> -->
+                    <a class="mdl-navigation__link" href="#pierwsza_pomoc">Pierwsza Pomoc</a>
+                    <a class="mdl-navigation__link" href="#kontakt">Kontakt</a>
                 </nav>
             </div>
         </header>
-        <main class="mdl-layout__content">
+        <main class="mdl-layout__content" id="content">
             <div class="mdl-grid medical-transport-max-width">
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp animated animation-fade-in">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">O nas</h2>
                     </div>
@@ -59,72 +77,68 @@
                     <div class="mdl-grid medical-transport-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">O nas</h3>
                         <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Jesteśmy firmą specjalizującą się w transportach sanitarno-medycznych oraz zabezpieczeniach medycznych. Posiadamy w pełni wyposażone ambulanse oraz wyszkoloną doświadczoną kadrę sanitariuszy i ratowników medycznych. Firma składa się z ludzi wynoszących doświadczenie z innych dużych firm medycznych, Pogotowia Ratunkowego a także Straży Pożarnej. To co robimy robimy z pasji do pomagania dlatego jakość naszych usług jest najwyższa.
+                            <p class="adjusted-paragraph">
+                                Witamy serdecznie w świecie Petrus Trans-Med! Transport medyczny i sanitarny nie z tej ziemi! Kilka słów o nas........ Jesteśmy dobrze zgraną, kameralną firmą, która czerpie radość i pasję z wykonywanego zawodu. Pragniemy pomagać innym w potrzebie niezależnie od tego w jak trudnej sytuacji jest nasz podopieczny. Każdy transport wykonujemy bardzo precyzyjnie, przy zachowaniu środków bezpieczeństwa. Cenimy sobie punktualność. Nie chcemy narażać chorego na niepotrzebnie stresujące sytuacje, a przy tym sprawiać dodatkowego cierpienia. Pracownicy, którzy świadczą usługi w naszej firmie, są odpowiednio wyszkoleni w wielu dziedzinach medycznych. Nasz skład stanowią nie tylko osoby takich profesji jak sanitariusz, pielęgniarka czy ratownik. Oprócz tego są to ratownicy z jednostek straży pożarnej, policji a nawet straży granicznej. Nasze pojazdy spełniają wymagane normy i certyfikaty. Są wyposażone w niezbędny sprzęt do transportu chorego, więc nasza załoga z pewnością poradzi sobie z różnymi nietypowymi sytuacjami, zarówno logistycznymi jak i medycznymi. Podsumowując, zachęcam państwa do skorzystania z naszej oferty. Stawiamy na jakość, a nie na ilość. Zaryzykuj i daj nam szansę, a nie będziesz rozczarowany.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="mdl-grid medical-transport-max-width sections">
-                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline section-label" id="transport">Transport Sanitarny</h3>
-                <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding">
-                    <p>
-                        OFERUJEMY PAŃSTWU PROFESJONALNY TRANSPORT MEDYCZNY  NA TERENIE ŁODZI, WOJEWÓDZTWA ŁÓDZKIEGO, POLSKI I ZA GRANICĄ.  JESTEŚMY DO PAŃSTWA DYSPOZYCJI 24 GODZINY NA DOBĘ 7 DNI W TYGODNIU.
+                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline section-label animated" id="zakres_dzialania">Zakres działania</h3>
+                <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding animated">
+                    <p class="adjusted-paragraph">
+                        Nasza firma świadczy usługi z zakresu transportu osób chorych, niepełnosprawnych i poszkodowanych w wypadkach. Realizujemy transporty typu sanitarnego i medycznego: transport chorego z łóżka do łóżka, przewóz osoby chorej do i ze szpitala (oraz między szpitalem), przewóz na badania, zabiegi, konsultacje, przewóz do domów opieki społecznej. Na życzenie danej osoby realizujemy transporty specjalne w wybrane przez klienta miejsce, np. spacer po parku czy wycieczka do Częstochowy. Dostosowujemy się do indywidualnych potrzeb. Nasz sprawny team pomoże w załatwieniu wszelkich formalności oraz dopilnuje, aby pacjent czuł się komfortowo i bezpiecznie. Wykonujemy transporty zarówno w pozycji leżącej na regulowanych noszach oraz na krzesełku kardiologicznym. Działamy na terenie całego województwa mazowieckiego oraz w całej Polsce i Europie. Naszą specjalnością są transporty zagraniczne.
                     </p>
                 </div>
-                <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-cell mdl-cell--6-col animated">
                     <img class="article-image" src=" images/karetki-z-noszami.png" border="0" alt="">
                 </div>
-                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline section-label" id="zabezpieczenia">Zabezpieczenia Medyczne</h3>
-                <div class="mdl-cell mdl-cell--6-col">
-                    <img class="article-image" src=" images/zdjecie2.png" border="0" alt="">
-                </div>
-                <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding ">
-                    <p>
-                        Specjalizujemy się w zabezpieczeniach medycznych wszelkiego rodzaju imprez począwszy od dużych uroczystości sportowych po małe firmowe eventy.
-                    </p>
-                </div>
-                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline section-label" id="pokazy">Pokazy Pierwszej Pomocy</h3>
-                <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding">
-                    <p>
-                        Wykonujemy również pokazy połączone z szybkim kursem pierwszej pomocy.
-                    </p>
-                </div>
-                <div class="mdl-cell mdl-cell--6-col">
+                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline section-label animated" id="pierwsza_pomoc">Pokazy Pierwszej Pomocy</h3>
+                <div class="mdl-cell mdl-cell--6-col animated">
                     <img class="article-image" src=" images/karetka-wewnatrz.jpg" border="0" alt="">
                 </div>
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding animated">
+                    <p class="adjusted-paragraph">
+                        Świadczymy usługi z zakresu przeprowadzania pokazów pierwszej pomocy, co obejmuje pokaz sprzętu ratowniczego oraz naukę udzielania pierwszej pomocy.
+                    </p>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp animated" id="kontakt">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Zamów transport już teraz!</h2>
+                        <h2 class="mdl-card__title-text">Skontaktuj się z nami!</h2>
                     </div>
                     <div class="mdl-card__media">
                         <img class="article-image" src=" images/amerykanska-karetka.jpg" border="0" alt="">
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p class="contact-text">
-                            Wyślij do nas zgłoszenie, opisz na czym ma polegać transport a my oddzwonimy do ciebie z potwierdzeniem dokonania przewozu.
+                            Skontaktuj się z nami mailowo lub telefonicznie!
                             <br><br>
                             <span class="contact-field">petrustransmed1@wp.pl</span>
                             <br><br>
                             <span class="contact-field">Telefon: 792-121-800</span>
+                            <br><br>
+                            Możesz również użyć poniższego formularza by wysłać do nas swoje zgłoszenie! Opisz swoje oczekiwania, uzupełnij swój email lub numer telefonu, a my czym prędzej skontaktujemy się z Tobą.
                         </p>
-                        <form method="POST" action="https://formspree.io/bartlomiejlawniczak1995@gmail.com" class="contact-form">
+                        <form method="POST" action="https://formspree.io/petrustransmed1@wp.pl" class="contact-form">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
-                                <label class="mdl-textfield__label" for="Name">Imię i nazwisko...</label>
-                                <span class="mdl-textfield__error">Niedozwolony znak</span>
+                                <input class="mdl-textfield__input" type="text" id="Name" name="name" required>
+                                <label class="mdl-textfield__label" for="Name">Imię i nazwisko</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="email" id="Email" name="email">
-                                <label class="mdl-textfield__label" for="Email">Twój email...</label>
+                                <input class="mdl-textfield__input" type="email" id="Email" name="email" required>
+                                <label class="mdl-textfield__label" for="Email">Twój email</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="Topic" name="email">
-                                <label class="mdl-textfield__label" for="Topic">Temat...</label>
+                                <input class="mdl-textfield__input" type="number" id="Mobile" name="Mobile" required>
+                                <label class="mdl-textfield__label" for="Mobile">Twój numer telefonu</label>
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="text"></textarea>
+                                <input class="mdl-textfield__input" type="text" id="Topic" name="topic" required>
+                                <label class="mdl-textfield__label" for="Topic">Temat</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="text" required></textarea>
                                 <label class="mdl-textfield__label" for="note">Wiadomość</label>
                             </div>
                             <p>
@@ -138,7 +152,7 @@
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">My test website</div>
+                    <div class="mdl-logo">Petrus Trans-Med</div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">

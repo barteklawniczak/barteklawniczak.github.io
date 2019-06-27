@@ -150,7 +150,13 @@ img.article-image {
     width: 100%;
 }
 
+.adjusted-paragraph {
+    line-height: 32px;
+    font-size: 1.2rem;
+}
+
 .section-label {
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -159,8 +165,9 @@ img.article-image {
 }
 
 .contact-text {
-    font-size: 20px;
+    font-size: 1.6rem;
     text-align: center;
+    line-height: 36px;
 }
 
 .contact-field {
@@ -187,14 +194,52 @@ footer {
     background-size: cover;
 }
 
-@media (max-width: 839px) {
-    .section-label {
-        text-align: center;
-    }
-}
-
 @media (max-width: 700px) {
     .tablet-and-desktop {
         display: none;
+    }
+}
+
+.mdl-textfield.is-invalid .mdl-textfield__input {
+    border-color: inherit;
+}
+
+.mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
+    color: currentColor;
+}
+
+.mdl-textfield.is-invalid .mdl-textfield__label::after {
+    background-color: currentColor;
+}
+
+.is-invalid {
+    color: currentColor;
+}
+
+.mdl-textfield {
+    width: 400px;
+}
+
+.is-compact {
+    cursor: pointer;
+}
+
+.animation-fade-in {
+    animation: 4s fadeIn;
+    animation-fill-mode: both;
+}
+
+.animated {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translate3d(0,40px,0);
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
     }
 }
