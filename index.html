@@ -44,6 +44,14 @@
             });
         });
     </script>
+    <script type="text/javascript">
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+            $('#content').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top - $('#content').offset().top
+            }, 1000);
+        });
+    </script>
 </head>
 
 <body>
@@ -116,9 +124,11 @@
                             <br><br>
                             <span class="contact-field">petrustransmed1@wp.pl</span>
                             <br><br>
-                            <span class="contact-field">Telefon: 792-121-800</span>
+                            <span class="contact-field">Infolinia medyczna: 792-121-800</span>
+                            <br>
+                            <span class="contact-field">Sprawy biurowe: 721-814-506</span>
                             <br><br>
-                            Możesz również użyć poniższego formularza by wysłać do nas swoje zgłoszenie! Opisz swoje oczekiwania, uzupełnij swój email lub numer telefonu, a my czym prędzej skontaktujemy się z Tobą.
+                            Możesz również użyć poniższego formularza by wysłać do nas swoje zgłoszenie! Opisz swoje oczekiwania, uzupełnij swój email i numer telefonu, a my czym prędzej skontaktujemy się z Tobą.
                         </p>
                         <form method="POST" action="https://formspree.io/petrustransmed1@wp.pl" class="contact-form">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
