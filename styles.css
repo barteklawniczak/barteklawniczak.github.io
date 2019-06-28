@@ -2,6 +2,11 @@ html {
     text-align: justify;
 }
 
+main {
+    background-color: lavenderblush;
+    background-image: url(images/eskulap.jpg);
+}
+
 .medical-transport-header {
     position: relative;
     background-image: url(images/header-bg.jpg);
@@ -92,6 +97,7 @@ html {
 .mdl-card__title-text {
     font-size: 38px;
     text-align: center;
+    font-weight: 500;
 }
 
 .medical-transport-blog-card-bg > .mdl-card__actions {
@@ -158,10 +164,16 @@ img.article-image {
 .section-label {
     text-align: center;
     margin-top: 30px;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
 }
 
 .sections {
     justify-content: center;
+}
+
+.contact-container {
+    margin-top: 25px;
 }
 
 .contact-text {
@@ -242,4 +254,11 @@ footer {
         transform: translate3d(0,0,0);
         opacity: 1
     }
+}
+
+.section__circle-container > .section__circle-container__circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    margin: 8px 0;
 }
