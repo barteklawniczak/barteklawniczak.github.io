@@ -37,7 +37,7 @@ main {
 }
 
 .medical-transport-logo {
-    background: url(https://www.monblu112.pl/wp-content/themes/transcend/images/eskulap.png) 50% no-repeat;
+    background: url(images/eskulap.png) 50% no-repeat;
     background-size: contain;
     height: 150px;
     width: 150px;
